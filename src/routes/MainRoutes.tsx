@@ -1,11 +1,13 @@
 import { useRoutes } from "react-router-dom";
-import { Photos } from "../pages/Photos";
-import { Albums } from "../pages/Albums";
+import { Album } from "../pages/Album";
+import { Home } from "../pages/Home";
+import { Photo } from "../pages/Photo";
 
 export const MainRoutes = () => {
 
   return useRoutes([
-    { path: '/', element: <Albums/>},
-    { path: '/album/:id/photos', element: <Photos />},
+    { path: '/', element: <Home/>},
+    { path: '/album/:id', element: <Album />},
+    { path: '/photo/:id', element: <Photo />}
   ]);
 }
